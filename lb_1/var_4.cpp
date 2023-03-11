@@ -45,10 +45,8 @@ void loop() {
 
         // Основное задание по варианту
         if (pair < 3) {
-            for (byte i = 0; i < LED_COUNT / 2; i++) {
-                digitalWrite(pins[i], LOW);
-                digitalWrite(pins[LED_COUNT - 1 - i], LOW);
-            }
+            digitalWrite(pins[pair], LOW);
+            digitalWrite(pins[LED_COUNT - 1 - pair], LOW);
             pair++;
         } else {
             for (byte i = 0; i < LED_COUNT; i++) {
