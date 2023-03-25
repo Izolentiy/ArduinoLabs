@@ -2,13 +2,11 @@
 #include "task_2.hpp"
 
 void setup() {
-  Serial.begin(9600);  // Открытие последовательного порта
-  Serial.setTimeout(50);  // Установка времени ожидания порта
-  // task_1_setup();
-  task_2_setup();
+  // task_1::setup();
+  task_2::setup();
 }
 
 void loop() {
-  // task_1_loop();
-  task_2_loop();
+  // task_1::loop();
+  task_2::loop();
 }

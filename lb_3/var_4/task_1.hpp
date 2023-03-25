@@ -15,7 +15,8 @@ namespace task_1 {
   void loop();
 }
 
-byte led_arr[5] = {3, 4, 5, 6, 7}; // Массив пинов к которым подключены светодиоды ленты
+// Массив пинов к которым подключены светодиоды ленты
+const byte led_arr[LED_COUNT] = {3, 4, 5, 6, 7};
 
 void task_1::set_strip_state(bool state) {
   for (byte i = 0; i < LED_COUNT; ++i) {
@@ -33,8 +34,8 @@ void task_1::setup() {
 
 void task_1::loop() {
   if (Serial.available()) { 
-    // При выполнении условия гарантируется, что в буфере есть хотя бы один байт,
-    // поэтому read_first_byte() вернет корректный байт
+    // При выполнении условия гарантируется, что в буфере есть хотя 
+    // бы один байт, поэтому read_first_byte() вернет корректный байт
     byte symbol = read_first_byte();
     // byte symbol = read_last_byte();
     // byte symbol = Serial.read();
